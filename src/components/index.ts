@@ -1,0 +1,5 @@
+export { Population } from './Population'
+export { Country } from './Country'
+export { Flag } from './Flag'
+export { Capital } from './Capital'
+export { QuizCard } from './QuizCard'

@@ -1,6 +1,7 @@
+import { FC } from "react";
 import { Link } from "react-router-dom";
 
-export const NoMatch = () => {
+export const NoMatch: FC = () => {
   return (
     <div>
       <h1>Ooups... Page non trouvée</h1>

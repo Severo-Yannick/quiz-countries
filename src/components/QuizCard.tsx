@@ -1,10 +1,9 @@
+import { FC } from "react";
+import { Score } from "./Score";
+import { QuizCardProps } from "../types/quizCardProps";
 import { Container, Typography, Card, CardHeader, CardContent, Box, CardActions, Button } from "@mui/material"
 
-interface QuizCardProps {
-  quizName: string;
-}
-
-export const QuizCard = ({quizName}: QuizCardProps) => {
+export const QuizCard: FC<QuizCardProps> = ({quizName}) => {
   return (
     <Container disableGutters maxWidth="sm" component="main" sx={{ pt: 8, pb: 6 }}>
       <Typography
@@ -72,6 +71,8 @@ export const QuizCard = ({quizName}: QuizCardProps) => {
           </Button>
         </CardActions>
       </Card>
+      <br />
+      <Score score={3}/>
     </Container>
   );
 };

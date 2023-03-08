@@ -1,9 +1,10 @@
+import { FC } from "react";
 import { NoMatch, Home } from "./pages/index"
 import { Routes, Route } from "react-router-dom";
 import { Header, Footer } from "./layout/index";
 import { Capital, Country, Flag, Population } from "./components";
 
-export const App = () => {
+export const App: FC = () => {
   return (
     <div>
       <Header />

@@ -1,9 +1,9 @@
-import { Score } from "../components/Score";
-import { GlobalStyles, CssBaseline, AppBar, Toolbar, Typography, Link } from "@mui/material";
+import { FC } from "react";
+import { GlobalStyles, CssBaseline, AppBar, Toolbar, Link } from "@mui/material";
 import { QUIZZES } from "../utils/constants";
 import { upperFirst } from "../utils/upperFirst";
 
-export const Header = () => {
+export const Header: FC = () => {
   return (
     <>
       <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />
@@ -15,13 +15,14 @@ export const Header = () => {
         sx={{ borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
       >
         <Toolbar sx={{ flexWrap: 'wrap' }}>
-          <Typography variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
+          <Link href={"/"} underline="none" variant="h5" color="inherit" noWrap sx={{ flexGrow: 1 }}>
             Quizz Countries
-          </Typography>
+          </Link>
           <nav>
             {QUIZZES.map(quiz => {
               return <Link
                 key={quiz}
+                underline="none"
                 variant="button"
                 color="text.primary"
                 href={`/${quiz}`}
@@ -31,7 +32,6 @@ export const Header = () => {
               </Link>
             })}
           </nav>
-          <Score />
         </Toolbar>
       </AppBar>
     </>

@@ -1,7 +1,8 @@
+import { FC } from "react";
 import { QuizCard } from "./QuizCard";
 
-export const Population = () => {
+export const Population: FC = () => {
   return (
-    <QuizCard quizName={"Population"}/>
+    <QuizCard quizName={"Population"} />
   );
 };

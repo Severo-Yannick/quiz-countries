@@ -1,5 +1,6 @@
 import { FC } from "react";
-import { Container, Typography } from "@mui/material";
+import { Container, Typography, Button } from "@mui/material";
+import { QUIZZES } from "../utils/constants";
 
 export const Home: FC = () => {
   return (
@@ -18,6 +19,9 @@ export const Home: FC = () => {
       </Typography>
       <Typography variant="h5" align="center" color="text.secondary" component="p">
         Elle comporte des questions sur les capitales, les drapeaux, les langues et bien d'autres aspects intéressants de chaque pays.
+      </Typography>
+      <Typography align="center" sx={{ marginTop: 3 }}>
+        {QUIZZES.map(quiz => <Button key={quiz} href={`/${quiz}`}>{quiz}</Button>)}
       </Typography>
     </Container>
   );

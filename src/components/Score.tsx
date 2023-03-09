@@ -3,9 +3,10 @@ import { Typography } from "@mui/material";
 
 interface ScoreProps {
   score: number;
+  questionNumber: number;
 }
 
-export const Score: FC<ScoreProps> = ({ score }) => {
+export const Score: FC<ScoreProps> = ({ score, questionNumber }) => {
   return (
     <Typography
       component="h3"
@@ -14,7 +15,7 @@ export const Score: FC<ScoreProps> = ({ score }) => {
       color="text.primary"
       gutterBottom
     >
-      Score {score}/10
+      Score {score}/{questionNumber}
     </Typography>
   );
 };

@@ -14,9 +14,8 @@ export const App: FC = () => {
     fetch('https://restcountries.com/v3.1/all')
       .then(response => response.json())
       .then((data: CountryType[]) => setCountries(data))
-      .catch(error => console.log(error));
+      .catch(error => console.error(error));
   }, [])
-
 
   return (
     <div>
